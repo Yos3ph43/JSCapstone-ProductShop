@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberPhone</title>
+    <!-- ggfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="" class="logo">CyberPhone</a>
+        <div class="right">
+          <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#" class="active">Shop</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </nav>
+          <div>
+            <button id="cart" class="btn btn-cart cart">
+              <i class="fa fa-shopping-cart"></i>
+              <span id="cartQuantity" class="cartQuantity"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Carousel -->
+    <section class="carousel"></section>
+    <!-- Products -->
+    <section class="product" id="product">
+      <header class="title">
+        <div class="container">
+          <h2>Product List</h2>
+
+          <div class="filterSearch">
+            <h3><i class="fa fa-filter"></i> Filter:</h3>
+            <form action="" id="filter">
+              <input type="checkbox" id="iphone" name="iphone" />
+              <label for="iphone">Iphone</label>
+              <input type="checkbox" id="samsung" name="samsung" />
+              <label for="samsung">Samsung</label>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="row" id="productListHTML"></div>
+        </div>
+      </main>
+    </section>
+    <!-- Cart -->
+    <section class="cartList" id="cartList">
+      <main class="main">
+        <div class="container">
+          <button class="btn-closeCart" id="btn-closeCart">
+            <i class="fa fa-angle-right"></i>
+          </button>
+          <div class="cartItems">
+            <div id="cartListHTML" class="top"></div>
+            <div class="bottom">
+              <div>
+                <div class="total">
+                  <h3>Total: <span id="calcPrice"></span>$</h3>
+                </div>
+                <button id="payment" class="btn payment">
+                  Purchase <i class="fa fa-credit-card"></i>
+                </button>
+                <button id="emptyCart" class="btn emptyCart">
+                  Empty Cart <i class="fa fa-trash-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+      integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./models/cartItem.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
