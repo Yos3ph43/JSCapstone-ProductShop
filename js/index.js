@@ -366,7 +366,7 @@ const buyNow = (event) => {
   addToCart(event);
   document.getElementById("cartList").style.width = "100%";
   document.getElementById("cartList").style.opacity = "100%";
-  flag = true;
+  isShowned = true;
 };
 const emptyCart = () => {
   if (!confirm(`Xóa tất cả sản phẩm trong giỏ hàng?`)) return;
